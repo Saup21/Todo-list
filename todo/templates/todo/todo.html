@@ -4,4 +4,12 @@
 <p>Blank</p>
 <p>Hi {{ user.username }}!</p>
 <p><a href="{% url 'logout' %}">Logout</a></p>
+
+{% for post in posts %}
+    <p>{{ post.author }}</p>
+    <p>{{ post.title }}</p>
+    <p>{{ post.text }}</p>
+    <time>{{ post.published_date }}</time>
+{% endfor %}
+
 {% endblock %}

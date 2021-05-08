@@ -3,13 +3,15 @@ from django.utils import timezone
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import RegistrationForm
+from .models import Post
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 
 # Create your views here.
 def todo(request):
     if request.user.is_authenticated:
-        return render(request, 'todo/todo.html', {})
+        posts = Post.objects.filter(author=request.user).order_by('-published_date')
+        return render(request, 'todo/todo.html', {'posts': posts})
     else:
         return redirect('login')
 # def login_request(request):
