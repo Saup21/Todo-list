@@ -1,0 +1,20 @@
+{% extends 'todo/index.html' %}
+{% load crispy_forms_tags %}
+{% load materializecss %}
+
+{% block content %}
+<div class="container">
+<div class="card card-login mx-auto mt-5">
+   <div class="card-header">Login</div>
+       <div class="card-body">
+           <form method="post">
+                 {% csrf_token %}
+                 {{ form|materializecss }}
+                 <button  class="btn btn-primary" type="submit">Login</button>
+           </form>
+           <p>Don't have an account create one <a href="{% url 'register' %}">here</a></p>
+       </div>
+   </div>
+</div>
+
+{% endblock %}
