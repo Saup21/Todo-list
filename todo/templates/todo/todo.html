@@ -1,15 +1,28 @@
-{% extends 'todo/index.html' %}
+{% extends 'todo/base.html' %}
 
-{% block content %}
-<p>Blank</p>
-<p>Hi {{ user.username }}!</p>
-<p><a href="{% url 'logout' %}">Logout</a></p>
+{% block content1 %}
 
 {% for post in posts %}
-    <p>{{ post.author }}</p>
-    <p>{{ post.title }}</p>
-    <p>{{ post.text }}</p>
-    <time>{{ post.published_date }}</time>
+    <div class="container">
+        <div class="card card-login mx-auto mt-5">
+           <div class="card-header">
+               <div class="row">
+                   <div class="col-6 col-sm-6">
+                      <p>{{ post.title }}</p>
+                   </div>
+                   <div class="col-6 col-sm-6">
+                       <time>{{ post.published_date }}</time>
+                   </div>
+               </div>
+           </div>
+           <div class="card-body">
+               <article class="">
+                   {{ post.text }}
+               </article>
+           </div>
+       </div>
+    </div>
 {% endfor %}
+
 
 {% endblock %}
