@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.utils import timezone
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .forms import RegistrationForm
+from .forms import RegistrationForm, PostcreationForm
 from .models import Post
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
@@ -46,3 +46,17 @@ def register_request(request):
     else:
         form = RegistrationForm()
     return render(request, 'todo/register.html', {'form': form})
+def new_post(request):
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = PostcreationForm(request.POST)
+            if form.is_valid():
+                instance = form.save(commit=False)
+                instance.author = request.user
+                instance.publish()
+                return redirect('/')
+        else:
+            form = PostcreationForm()
+        return render(request, 'todo/new_post.html', {'form': form})
+    else:
+        return redirect('login')

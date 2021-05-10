@@ -1,5 +1,36 @@
+body {
+    margin-bottom: 3%;
+}
+
+nav.bg-blueviolet {
+    background-color: #8A2BE2;
+}
+
 a.bnbr {
     font-family: 'Krona One', sans-serif, serif;
     font-size: 35px;
     font-weight: 700;
+}
+
+a.ni {
+    font-size: 25px;
+}
+
+a.cur {
+    cursor: default;
+}
+
+div.post-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+p.title {
+    font-family: 'Lobster', sans-serif;
+    font-size: 45px;
+    margin-bottom: 0px;
+}
+
+time.dt {
+    font-family: cursive;
 }

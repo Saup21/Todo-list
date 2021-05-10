@@ -5,19 +5,13 @@
 {% for post in posts %}
     <div class="container">
         <div class="card card-login mx-auto mt-5">
-           <div class="card-header">
-               <div class="row">
-                   <div class="col-6 col-sm-6">
-                      <p>{{ post.title }}</p>
-                   </div>
-                   <div class="col-6 col-sm-6">
-                       <time>{{ post.published_date }}</time>
-                   </div>
-               </div>
+           <div class="card-header post-flex">
+               <p class="title"><u>{{ post.title }}</u></p>
+               <time class="dt">{{ post.published_date }}</time>
            </div>
            <div class="card-body">
                <article class="">
-                   {{ post.text }}
+                   {{ post.text|linebreaksbr }}
                </article>
            </div>
        </div>
