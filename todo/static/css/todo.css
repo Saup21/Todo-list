@@ -25,12 +25,26 @@ div.post-flex {
     justify-content: space-between;
 }
 
+a.title {
+    font-family: 'Lobster', sans-serif;
+    font-size: 45px;
+    margin-bottom: 0px;
+    color: black;
+}
+
 p.title {
     font-family: 'Lobster', sans-serif;
     font-size: 45px;
     margin-bottom: 0px;
+    color: black;
+    cursor: default;
+}
+
+article.text {
+    cursor: default;
 }
 
 time.dt {
     font-family: cursive;
+    cursor: default;
 }

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -58,5 +58,11 @@ def new_post(request):
         else:
             form = PostcreationForm()
         return render(request, 'todo/new_post.html', {'form': form})
+    else:
+        return redirect('login')
+def post_detail(request, pk):
+    if request.user.is_authenticated:
+        post = get_object_or_404(Post, author=request.user, pk=pk)
+        return render(request, 'todo/post_detail.html', {'post': post})
     else:
         return redirect('login')

@@ -9,4 +9,5 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='todo/login.html'), name='login'),
     path('logout/', views.logout_request, name='logout'),
     path('post/create/', views.new_post, name='new_post'),
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
 ]
