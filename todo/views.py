@@ -54,7 +54,7 @@ def new_post(request):
                 instance = form.save(commit=False)
                 instance.author = request.user
                 instance.publish()
-                return redirect('/')
+                return redirect('post_detail', pk=instance.pk)
         else:
             form = PostcreationForm()
         return render(request, 'todo/new_post.html', {'form': form})
