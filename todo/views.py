@@ -66,3 +66,10 @@ def post_detail(request, pk):
         return render(request, 'todo/post_detail.html', {'post': post})
     else:
         return redirect('login')
+def delete_post(request, pk):
+    if request.user.is_authenticated:
+        post = Post.objects.get(author=request.user, pk=pk)
+        post.delete()
+        return redirect('/')
+    else:
+        return redirect('login')

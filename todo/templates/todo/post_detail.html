@@ -20,12 +20,32 @@
         <div class="opt col-1 col-sm-1">
             <div class="del-edit">
                 <ul class="dot">
-                    <li class="show"><button type="button" class="btn btn-light"><i class="fas fa-ellipsis-v"></i></button></li>
-                    <li class="hide"><button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button></li>
-                    <li class="hide"><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></li>
+                    <li class="show"><button type="button" class="ansh btn btn-light"><i class="sham fas fa-ellipsis-v"></i></button></li>
+                    <li class="hide"><button type="button" class="ansh btn btn-warning"><a href="#"><i class="sham fas fa-edit"></i></a></button></li>
+                    <li class="hide"><button type="button" class="ansh btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="sham fas fa-trash-alt"></i></button></li>
                 </ul>
             </div>
         </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Are you sure?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to delete the post?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">NO</button>
+            <button type="button" class="afrm btn btn-danger"><a href="{% url 'delete_post' pk=post.pk %}">YES</a></button>
+          </div>
+        </div>
+      </div>
     </div>
 </div>
 
