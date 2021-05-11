@@ -3,17 +3,30 @@
 {% block content1 %}
 
 <div class="container">
-    <div class="card card-login mx-auto mt-5">
-       <div class="card-header post-flex">
-           <p class="title"><u>{{ post.title }}</u></p>
-           <time class="dt">{{ post.published_date }}</time>
-       </div>
-       <div class="card-body">
-           <article class="text">
-               {{ post.text|linebreaksbr }}
-           </article>
-       </div>
-   </div>
+    <div class="row">
+        <div class="col-11 col-sm-11">
+            <div class="card card-login mx-auto mt-5">
+               <div class="card-header post-flex">
+                   <p class="title"><u>{{ post.title }}</u></p>
+                   <time class="dt">{{ post.published_date }}</time>
+               </div>
+               <div class="card-body">
+                   <article class="text">
+                       {{ post.text|linebreaksbr }}
+                   </article>
+               </div>
+            </div>
+        </div>
+        <div class="opt col-1 col-sm-1">
+            <div class="del-edit">
+                <ul class="dot">
+                    <li class="show"><button type="button" class="btn btn-light"><i class="fas fa-ellipsis-v"></i></button></li>
+                    <li class="hide"><button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button></li>
+                    <li class="hide"><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
