@@ -25,7 +25,7 @@
             <div class="del-edit">
                 <ul class="dot">
                     <li class="show"><button type="button" class="ansh btn btn-light"><i class="sham fas fa-ellipsis-v"></i></button></li>
-                    <li class="hide"><a href="#"><button type="button" class="ansh btn btn-warning"><i class="sham fas fa-edit"></i></button></a></li>
+                    <li class="hide"><a href="{% url 'post_edit' pk=post.pk %}"><button type="button" class="ansh btn btn-warning"><i class="sham fas fa-edit"></i></button></a></li>
                     <li class="hide"><button type="button" class="ansh btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="sham fas fa-trash-alt"></i></button></li>
                 </ul>
             </div>
