@@ -50,9 +50,17 @@ div.time-row {
     height: 26px;
 }
 
-div.card-srow {
-    padding-top: 2px;
-    padding-bottom: 0px;
+div.title-row {
+    line-height: 1.7rem;
+}
+
+div.title-row.pdet {
+    padding-bottom: 14px;
+}
+
+div.card-header.card-srow {
+    min-height: 67.2px;
+    background-color: #d9b3ff;
 }
 
 div.col-11.col-sm-11 {

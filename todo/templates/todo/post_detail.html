@@ -6,14 +6,12 @@
     <div class="row">
         <div class="col-11 col-sm-11">
             <div class="card card-login mx-auto mt-5">
-               <div class="card-header">
-                   <div class="row">
-                       <div class="col-8 col-sm-8">
-                           <p class="title"><u>{{ post.title }}</u></p>
-                       </div>
-                       <div class="col-4 col-sm-4">
-                           <time class="dt">{{ post.published_date }}</time>
-                       </div>
+               <div class="card-header card-srow">
+                   <div class="time-row">
+                       <time class="dt">{{ post.published_date }}</time>
+                   </div>
+                   <div class="title-row pdet">
+                       <p class="title"><u>{{ post.title }}</u></p>
                    </div>
                </div>
                <div class="card-body">
@@ -27,7 +25,7 @@
             <div class="del-edit">
                 <ul class="dot">
                     <li class="show"><button type="button" class="ansh btn btn-light"><i class="sham fas fa-ellipsis-v"></i></button></li>
-                    <li class="hide"><button type="button" class="ansh btn btn-warning"><a href="#"><i class="sham fas fa-edit"></i></a></button></li>
+                    <li class="hide"><a href="#"><button type="button" class="ansh btn btn-warning"><i class="sham fas fa-edit"></i></button></a></li>
                     <li class="hide"><button type="button" class="ansh btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="sham fas fa-trash-alt"></i></button></li>
                 </ul>
             </div>
@@ -48,7 +46,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-success" data-dismiss="modal">NO</button>
-            <button type="button" class="afrm btn btn-danger"><a href="{% url 'delete_post' pk=post.pk %}">YES</a></button>
+            <a href="{% url 'delete_post' pk=post.pk %}"><button type="button" class="afrm btn btn-danger">YES</button></a>
           </div>
         </div>
       </div>
