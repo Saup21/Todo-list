@@ -20,11 +20,6 @@ a.cur {
     cursor: default;
 }
 
-div.post-flex {
-    display: flex;
-    justify-content: space-between;
-}
-
 a.title {
     font-family: 'Lobster', sans-serif;
     font-size: 55px;
@@ -48,10 +43,16 @@ article.text {
 time.dt {
     font-family: cursive;
     cursor: default;
+    float: right;
 }
 
-div.row {
-    padding: 15px;
+div.time-row {
+    height: 26px;
+}
+
+div.card-srow {
+    padding-top: 2px;
+    padding-bottom: 0px;
 }
 
 div.col-11.col-sm-11 {

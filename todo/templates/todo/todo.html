@@ -5,9 +5,21 @@
 {% for post in posts %}
     <div class="container">
         <div class="card card-login mx-auto mt-5">
-           <div class="card-header post-flex">
-               <a class="title" href="{% url 'post_detail' pk=post.pk %}"><u>{{ post.title }}</u></a>
-               <time class="dt">{{ post.published_date }}</time>
+           <div class="card-header card-srow">
+               <div class="time-row">
+                   <time class="dt">{{ post.published_date }}</time>
+               </div>
+               <div class="title-row">
+                   <a class="title" href="{% url 'post_detail' pk=post.pk %}"><u>{{ post.title }}</u></a>
+               </div>
+               <!-- <div class="row">
+                   <div class="col-6 col-sm-6 col-md-9">
+                       <a class="title" href="{% url 'post_detail' pk=post.pk %}"><u>{{ post.title }}</u></a>
+                   </div>
+                   <div class="col-6 col-sm-6 col-md-3">
+                       <time class="dt">{{ post.published_date }}</time>
+                   </div>
+               </div> -->
            </div>
            <div class="card-body">
                <article class="text">
