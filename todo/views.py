@@ -79,11 +79,12 @@ def post_edit(request, pk):
         form = PostcreationForm(instance=post)
         if request.method == 'POST':
             form = PostcreationForm(request.POST)
-            stage = form.save(commit=False)
-            stage.author = request.user
-            stage.pk = pk
-            stage.publish()
-            return redirect('post_detail', pk)
+            if form.is_valid():
+                stage = form.save(commit=False)
+                stage.author = request.user
+                stage.pk = pk
+                stage.publish()
+                return redirect('post_detail', pk)
         return render(request, 'todo/edit_post.html', {'form': form})
     else:
         return redirect('login')

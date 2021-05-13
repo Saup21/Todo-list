@@ -1,6 +1,6 @@
-/* body {
+body {
     margin-bottom: 3%;
-} */
+}
 
 nav.bg-blueviolet {
     background-color: #8A2BE2;
@@ -8,7 +8,7 @@ nav.bg-blueviolet {
 
 a.bnbr {
     font-family: 'Krona One', sans-serif, serif;
-    font-size: 35px;
+    font-size: 34px;
     font-weight: 700;
 }
 
@@ -128,7 +128,7 @@ button.afrm a {
     color: white;
 }
 
-p.footsy {
+/* p.footsy {
     margin-top: 3%;
     margin-bottom: 3%;
 }
@@ -137,4 +137,47 @@ p.footsy.posd {
     position: fixed;
     bottom: 0;
     left: 40%;
+}
+.footer-moto{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 1%;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    font-size:1vw;
+}
+ */
+@media screen and (max-width: 572px) {
+
+    div.shh {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    div.shrink {
+        max-width: 30rem;
+    }
+
+    .mx-auto {
+        margin-left: 2.5% !important;
+        margin-right: 0% !important;
+    }
+
+    button.ansh {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        padding-bottom: 6px;
+    }
+
+    a.title {
+        line-height: 3.2rem;
+    }
+
+    p.title {
+        line-height: 3.2rem;
+    }
 }

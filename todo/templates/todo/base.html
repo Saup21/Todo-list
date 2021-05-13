@@ -4,25 +4,14 @@
     <head>
         <meta charset="utf-8">
         <title>Todo-list</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="{% static 'images/icon.webp' %}" type="image/gif" sizes="16x16">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'css/todo.css' %}">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script>
-        $(document).ready(function() {
-            if($('body').height() < $(window).height()) {
-                $('p.footsy').addClass('posd');
-                console.log($('body').height(), $(window).height(), 'x');
-            }
-            else {
-                $('p.footsy').removeClass('posd');
-                console.log($('body').height(), $(window).height(), 'y');
-            }
-        });
-        </script>
     </head>
     <body>
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-blueviolet">
@@ -47,9 +36,7 @@
         </nav>
         {% block content1 %}
         {% endblock %}
-        <div class="container">
-            <p class="footsy footer-heart text-center">Developed with <g-emoji class="g-emoji" alias="heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"><img class="emoji" alt="heart" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"></g-emoji> by <a href="/">Sauparna Gupta</a></p>
-        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/5820680ab6.js" crossorigin="anonymous"></script>
         <script src="{% static 'js/todo.js' %}" type="text/javascript"></script>
