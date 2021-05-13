@@ -99,13 +99,13 @@ Installing requirements :
 ```
 pip install -r requirements.txt
 ```
-**Step 7**: Creating Superuser and making database migrations to access the default Admin Panel
-```
-python manage.py createsuperuser
-```
+**Step 7**: Making database migrations and Creating Superuser to access the default Admin Panel
 ```
 python manage.py makemigrations
 python manage.py migrate
+```
+```
+python manage.py createsuperuser
 ```
 
 ---
