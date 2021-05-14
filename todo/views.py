@@ -41,8 +41,8 @@ def register_request(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            # messages.info(request, 'Account created successfully')
-        return redirect('/')
+            messages.info(request, 'Account created successfully')
+            return redirect('/')
     else:
         form = RegistrationForm()
     return render(request, 'todo/register.html', {'form': form})
